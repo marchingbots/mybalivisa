@@ -519,39 +519,38 @@
 
   /* FOOTER */
 
-  .site-footer {
-    background: var(--text);
-    color: var(--bg);
-    padding: 42px 0;
-  }
+/* FOOTER */
 
-  .footer-inner {
-    display: grid;
-    gap: 28px;
-  }
+.site-footer {
+  background: var(--text);
+  color: var(--bg);
+  padding: 42px 0;
+}
 
-  .footer-brand {
-    font-size: clamp(2rem, 5vw, 4.6rem);
-    line-height: 0.94;
-    letter-spacing: -0.075em;
-    font-weight: 850;
+.footer-inner {
+  display: grid;
+  gap: 28px;
+}
 
-      margin-bottom: clamp(8px, 1vw, 14px);
-  }
+.footer-brand {
+  font-size: clamp(2rem, 5vw, 4.6rem);
+  line-height: 0.94;
+  letter-spacing: -0.075em;
+  font-weight: 850;
+  margin-bottom: clamp(8px, 1vw, 14px);
+}
 
-.footer-brand-lockup {
+.footer-brand .footer-brand-lockup {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
-  letter-spacing: -0.075em;
+  letter-spacing: inherit;
   color: var(--bg);
 }
 
-.footer-brand-lockup .brand-bali {
+.footer-brand .footer-brand-lockup .brand-bali {
   bottom: 0.05em;
 }
-
-
 
 .footer-links {
   display: flex;
@@ -575,8 +574,26 @@
 
 .footer-links a:hover {
   color: var(--bg);
-} 
+}
 
+.fine-print {
+  color: rgba(247, 244, 238, 0.54);
+  font-size: 0.88rem;
+}
+
+/* Protect footer logo from global brand-lockup compression */
+
+@media (max-height: 720px) {
+  .footer-brand .footer-brand-lockup {
+    font-size: inherit;
+  }
+}
+
+@media (max-height: 580px) {
+  .footer-brand .footer-brand-lockup {
+    font-size: inherit;
+  }
+}
 
 
 
@@ -652,6 +669,16 @@
       margin-top: 88px;
     }
   }
+
+  @media (max-width: 767px) and (min-width: 456px) {
+  #visas .section-card:first-child {
+    margin-bottom: 20px;
+  }
+
+  #visas .section-card:first-child .section-copy {
+    margin-top: 15px;
+  }
+}
 
   @media (min-width: 768px) and (max-width: 991px) {
     .hero-title {
