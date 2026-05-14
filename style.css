@@ -497,6 +497,11 @@ h3 {
   font-weight: 800;
 }
 
+.deep-dive-list a:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
 /* By the Book */
 
 .by-the-book-card h2 {
@@ -517,7 +522,112 @@ h3 {
 
 /* Footer */
 
+
+
+/* Footer */
+
 .site-footer {
+  padding: clamp(56px, 7vw, 92px) 0;
+  background: var(--text);
+  color: var(--bg);
+}
+
+.footer-layout {
+  display: grid;
+  gap: clamp(42px, 6vw, 96px);
+}
+
+.footer-brand-column {
+  max-width: 540px;
+}
+
+.footer-brand {
+  margin-bottom: clamp(10px, 1vw, 18px);
+  font-size: clamp(2rem, 5vw, 4.8rem);
+  font-weight: 850;
+  line-height: 0.94;
+  letter-spacing: -0.075em;
+}
+
+.footer-brand .footer-brand-lockup {
+  color: var(--bg);
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.footer-brand .brand-bali {
+  bottom: 0.05em;
+}
+
+.footer-statement {
+  max-width: 28ch;
+  color: rgba(247, 244, 238, 0.78);
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.35rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+.fine-print {
+  margin-top: 28px;
+  color: rgba(247, 244, 238, 0.44);
+  font-size: 0.82rem;
+  letter-spacing: -0.02em;
+}
+
+.footer-links-group {
+  display: grid;
+  gap: 18px;
+}
+
+.footer-label {
+  color: rgba(247, 244, 238, 0.42);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: grid;
+  gap: 14px;
+}
+
+.footer-links a {
+  width: fit-content;
+  color: rgba(247, 244, 238, 0.84);
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.18rem);
+  font-weight: 620;
+  letter-spacing: -0.03em;
+  transition:
+    color 180ms ease,
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.footer-links a:hover {
+  color: var(--bg);
+  opacity: 0.72;
+  transform: translateX(4px);
+}
+
+.footer-links-secondary a {
+  color: rgba(247, 244, 238, 0.62);
+}
+
+@media (min-width: 768px) {
+  .footer-layout {
+    grid-template-columns:
+      minmax(0, 1.4fr)
+      minmax(180px, 0.7fr)
+      minmax(180px, 0.7fr);
+    align-items: start;
+  }
+}
+
+/* .site-footer {
   padding: 42px 0;
   background: var(--text);
   color: var(--bg);
@@ -569,7 +679,7 @@ h3 {
 
 .footer-links a:hover {
   color: var(--bg);
-}
+} */
 
 /* Breakpoints */
 
@@ -765,20 +875,32 @@ h3 {
   max-width: 1060px;
 }
 
+
+/* the best one  */
+
+
 .seo-subheading {
   width: fit-content;
   max-width: 720px;
-  /* margin-top: clamp(18px, 2.6vw, 34px); */
   margin-top: clamp(42px, 6vw, 96px);
   padding: 9px 13px;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.46);
   color: var(--gold);
-  /* font-size: clamp(0.72rem, 0.7rem + 0.25vw, 0.9rem); */
   font-size: clamp(0.58rem, 0.55rem + 0.16vw, 0.72rem);
   font-weight: 850;
   letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;
 }
+
+/* .seo-subheading {
+  margin-top: 18px;
+  color: rgba(31, 37, 35, 0.52);
+  font-size: clamp(0.72rem, 0.68rem + 0.18vw, 0.86rem);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  text-transform: none;
+} */

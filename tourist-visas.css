@@ -58,6 +58,21 @@
   margin-top: clamp(24px, 4vw, 42px);
 }
 
+/* DECISION INTRO */
+
+.visa-decision-card .topic-label {
+  margin-bottom: clamp(18px, 2vw, 26px);
+}
+
+.visa-decision-card h2 {
+  max-width: 1040px;
+}
+
+.visa-decision-card .section-copy {
+  margin-top: clamp(24px, 3vw, 42px);
+  max-width: 880px;
+}
+
 /* VISA EDITORIAL GRID */
 
 .visa-editorial-grid {
@@ -72,6 +87,14 @@
   border-radius: var(--radius-lg);
   background: var(--card);
   box-shadow: var(--shadow);
+}
+
+.visa-editorial-card.warm-card {
+  background: var(--card-warm);
+}
+
+.featured-visa-card {
+  border-color: rgba(31, 77, 58, 0.22);
 }
 
 .visa-editorial-card h3 {
@@ -134,61 +157,14 @@
   text-transform: uppercase;
 }
 
-/* COMPARISON TABLE */
-
-.comparison-card h2 {
-  margin-bottom: clamp(32px, 5vw, 52px);
-}
-
-.visa-table-wrapper {
-  overflow-x: auto;
-  border-radius: 24px;
-  border: 1px solid var(--border);
-}
-
-.visa-table {
-  width: 100%;
-  min-width: 1120px;
-  border-collapse: collapse;
-  background: var(--card);
-}
-
-.visa-table thead {
-  background: var(--card-warm);
-}
-
-.visa-table th {
-  padding: 20px 18px;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-  font-size: 0.84rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.visa-table td {
-  padding: 22px 18px;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.98rem;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  vertical-align: top;
-}
-
-.visa-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.visa-table tbody tr:hover {
-  background: rgba(31, 77, 58, 0.03);
-}
-
 /* PRICING LINK */
 
 .pricing-link-card {
   overflow: hidden;
+}
+
+.pricing-link-card h2 {
+  margin-bottom: clamp(24px, 4vw, 42px);
 }
 
 .pricing-link-layout {
@@ -208,8 +184,24 @@
 
 /* OTHER OPTION */
 
-.warm-card .topic-label {
+.other-option-card .topic-label {
   margin-bottom: 18px;
+}
+
+.other-option-card .section-copy {
+  margin-top: clamp(24px, 3vw, 42px);
+}
+
+.supporting-copy {
+  max-width: 740px;
+  margin-top: clamp(24px, 3vw, 36px);
+  padding-top: clamp(20px, 2vw, 28px);
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  font-size: clamp(1.05rem, 1.1vw + 0.65rem, 1.35rem);
+  font-weight: 520;
+  line-height: 1.5;
+  letter-spacing: -0.035em;
 }
 
 /* BREAKPOINTS */
@@ -261,11 +253,6 @@
 
   .visa-editorial-card h3 {
     font-size: clamp(2rem, 10vw, 3rem);
-  }
-
-  .visa-table th,
-  .visa-table td {
-    padding: 16px 14px;
   }
 }
 
