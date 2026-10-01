@@ -6,11 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.querySelector("#mobile-menu");
   const mobileLinks = document.querySelectorAll(".mobile-menu a");
 
+  // function closeMenu() {
+  //   menuButton.setAttribute("aria-expanded", "false");
+  //   menuButton.setAttribute("aria-label", "Open menu");
+  //   mobileMenu.classList.remove("is-open");
+  // }
+
   function closeMenu() {
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open menu");
-    mobileMenu.classList.remove("is-open");
-  }
+  if (!menuButton || !mobileMenu) return;
+
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "Open menu");
+  mobileMenu.classList.remove("is-open");
+}
 
   if (menuButton && mobileMenu) {
     menuButton.addEventListener("click", () => {
