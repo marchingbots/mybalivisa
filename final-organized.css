@@ -1485,6 +1485,218 @@ h3 {
 
 
 
+/* =========================================================
+   HOME — INTENT ROUTER
+   ========================================================= */
+
+
+.intent-router {
+
+  padding-top: clamp(72px, 9vw, 136px);
+
+  padding-bottom: clamp(80px, 10vw, 152px);
+
+}
+
+
+.intent-router-content {
+
+  min-width: 0;
+
+}
+
+
+.intent-router-content h2 {
+
+  max-width: 900px;
+
+  margin-bottom: clamp(48px, 6vw, 88px);
+
+  font-size: clamp(3.4rem, 7.5vw, 7.8rem);
+
+  font-weight: 850;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.065em;
+
+}
+
+
+/* Router grid */
+
+
+.intent-router-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid var(--border);
+
+  border-left: 1px solid var(--border);
+
+}
+
+
+.intent-route {
+
+  min-height: clamp(132px, 13vw, 190px);
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: clamp(22px, 2.5vw, 34px);
+
+  border-right: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
+
+  background: var(--card-warm);
+
+
+  color: var(--text);
+
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+
+}
+
+
+.intent-route-label {
+
+  font-size: clamp(1.7rem, 2.8vw, 3rem);
+
+  font-weight: 750;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+
+}
+
+
+.intent-route-arrow {
+
+  flex: 0 0 auto;
+
+  color: var(--gold);
+
+  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+
+}
+
+
+/* Interaction */
+
+
+.intent-route:hover,
+.intent-route:focus-visible {
+
+  background: var(--green);
+
+  color: var(--bg);
+
+}
+
+
+.intent-route:hover .intent-route-arrow,
+.intent-route:focus-visible .intent-route-arrow {
+
+  color: var(--bg);
+
+  transform: translate(4px, -4px);
+
+}
+
+
+/* Tablet */
+
+
+@media (min-width: 576px) and (max-width: 996px) {
+
+  .intent-router-grid {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  }
+
+
+  .intent-route {
+
+    min-height: 130px;
+
+  }
+
+}
+
+
+/* Mobile */
+
+
+@media (max-width: 575px) {
+
+  .intent-router {
+
+    padding-top: 64px;
+
+    padding-bottom: 80px;
+
+  }
+
+
+  .intent-router-content h2 {
+
+    max-width: 9ch;
+
+    margin-bottom: 42px;
+
+    font-size: clamp(3rem, 14vw, 4.4rem);
+
+  }
+
+
+  .intent-router-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .intent-route {
+
+    min-height: 92px;
+
+    align-items: center;
+
+    padding: 20px 18px;
+
+  }
+
+
+  .intent-route-label {
+
+    font-size: clamp(1.6rem, 8vw, 2.1rem);
+
+  }
+
+}
+
+
 
 
 /* =========================================================
