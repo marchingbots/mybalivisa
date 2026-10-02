@@ -1,0 +1,943 @@
+/* =========================================================
+   MYBALIVISA — PROPERTY
+
+   01. Design tokens
+   02. Reset / global
+   03. Typography
+   04. Site shell
+   05. Header / navigation / brand
+   06. Buttons
+   07. Footer
+   08. Visit — hero
+   09. Visit — shared sections
+   10. Visit — scope list
+   11. Visit — activity boundary
+   12. Visit — official visa link
+   13. Visit — CTA
+   14. Responsive rules
+   15. Accessibility / motion
+   ========================================================= */
+
+
+/* =========================================================
+   01 — DESIGN TOKENS
+   ========================================================= */
+
+:root {
+  --bg: #f7f4ee;
+  --text: #1f2523;
+  --muted: #5f675f;
+  --green: #1f4d3a;
+  --green-dark: #17392b;
+  --card: #ffffff;
+  --card-warm: #f1ede5;
+  --gold: #c8a96a;
+  --border: rgba(31, 37, 35, 0.16);
+
+  --radius-lg: 28px;
+
+  --shadow:
+    0 1px 2px rgba(31, 37, 35, 0.03),
+    0 12px 36px rgba(31, 37, 35, 0.04);
+
+  --container: min(100% - 32px, 1200px);
+}
+
+
+/* =========================================================
+   02 — RESET / GLOBAL
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* =========================================================
+   03 — TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.06em;
+}
+
+p {
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   04 — SITE SHELL
+   ========================================================= */
+
+.site-shell {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   05 — HEADER / NAVIGATION / BRAND
+   ========================================================= */
+
+.site-header {
+  position: relative;
+  z-index: 20;
+
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.header-inner {
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: baseline;
+
+  color: var(--green);
+
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
+.brand-lockup-nav {
+  font-size: clamp(1.35rem, 2vw, 2.4rem);
+}
+
+.brand-my {
+  font-weight: 500;
+}
+
+.brand-bali {
+  position: relative;
+  bottom: 0.04em;
+
+  font-weight: 800;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.hamburger {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0;
+  border: 0;
+
+  background: transparent;
+  color: var(--text);
+
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+
+  display: block;
+
+  background: currentColor;
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+
+  padding-bottom: 18px;
+}
+
+.mobile-menu.is-open {
+  display: block;
+}
+
+.mobile-menu a {
+  display: block;
+
+  padding: 18px 2px;
+
+  border-bottom: 1px solid var(--border);
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================================
+   06 — BUTTONS
+   ========================================================= */
+
+.button {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 22px;
+
+  border-radius: 999px;
+
+  font-weight: 750;
+  letter-spacing: -0.03em;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   07 — FOOTER
+   ========================================================= */
+
+.site-footer {
+  padding: clamp(56px, 7vw, 92px) 0;
+
+  background: var(--text);
+  color: var(--bg);
+}
+
+.footer-layout {
+  display: grid;
+  gap: clamp(42px, 6vw, 96px);
+}
+
+.footer-brand-column {
+  max-width: 540px;
+}
+
+.footer-brand {
+  margin-bottom: clamp(10px, 1vw, 18px);
+
+  font-size: clamp(2rem, 5vw, 4.8rem);
+  font-weight: 850;
+  line-height: 0.94;
+  letter-spacing: -0.075em;
+}
+
+.footer-brand .footer-brand-lockup {
+  color: var(--bg);
+
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.footer-statement {
+  max-width: 28ch;
+
+  color: rgba(247, 244, 238, 0.78);
+
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.35rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+.fine-print {
+  margin-top: 28px;
+
+  color: rgba(247, 244, 238, 0.44);
+
+  font-size: 0.82rem;
+  letter-spacing: -0.02em;
+}
+
+.footer-links-group {
+  display: grid;
+  gap: 18px;
+}
+
+.footer-label {
+  color: rgba(247, 244, 238, 0.42);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: grid;
+  gap: 14px;
+}
+
+.footer-links a {
+  width: fit-content;
+
+  color: rgba(247, 244, 238, 0.84);
+
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.18rem);
+  font-weight: 620;
+  letter-spacing: -0.03em;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.footer-links a:hover {
+  color: var(--bg);
+
+  opacity: 0.72;
+  transform: translateX(4px);
+}
+
+.footer-links-secondary a {
+  color: rgba(247, 244, 238, 0.62);
+}
+
+
+/* =========================================================
+   08 — VISIT HERO
+   ========================================================= */
+
+.visit-hero {
+  padding:
+    clamp(84px, 11vw, 160px)
+    0
+    clamp(76px, 10vw, 140px);
+}
+
+.visit-hero-grid {
+  display: grid;
+}
+
+.page-label {
+  width: fit-content;
+
+  margin-bottom: clamp(26px, 4vw, 46px);
+  padding: 9px 13px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.46);
+  color: var(--gold);
+
+  font-size: 0.7rem;
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.visit-hero h1 {
+  max-width: 1000px;
+
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 850;
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+}
+
+.visit-lead {
+  max-width: 660px;
+
+  margin-top: clamp(30px, 5vw, 58px);
+
+  color: var(--muted);
+
+  font-size: clamp(1.4rem, 2.6vw, 2.3rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+
+/* =========================================================
+   09 — SHARED VISIT SECTIONS
+   ========================================================= */
+
+.visit-section {
+  padding: clamp(68px, 9vw, 130px) 0;
+
+  border-top: 1px solid var(--border);
+}
+
+.visit-content-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.visit-section-marker {
+  color: var(--gold);
+
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.visit-content {
+  min-width: 0;
+}
+
+.visit-content > h2 {
+  max-width: 850px;
+
+  font-size: clamp(3rem, 6.2vw, 6.6rem);
+  font-weight: 850;
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+}
+
+.visit-introduction {
+  max-width: 760px;
+
+  display: grid;
+  gap: 26px;
+
+  margin-top: clamp(34px, 5vw, 58px);
+}
+
+.visit-introduction p {
+  color: var(--muted);
+
+  font-size: clamp(1.08rem, 1vw + 0.65rem, 1.4rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.visit-introduction .visit-introduction-primary {
+  max-width: 650px;
+
+  color: var(--text);
+
+  font-size: clamp(1.4rem, 2.4vw, 2.15rem);
+  font-weight: 650;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
+}
+
+
+/* =========================================================
+   10 — SCOPE LIST
+   ========================================================= */
+
+.visit-scope-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  margin-top: clamp(48px, 6vw, 76px);
+
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.visit-scope-item {
+  min-height: 150px;
+
+  display: grid;
+  align-content: space-between;
+  gap: 30px;
+
+  padding: clamp(22px, 3vw, 34px);
+
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.scope-number {
+  color: var(--gold);
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.visit-scope-item p {
+  max-width: 28ch;
+
+  font-size: clamp(1.15rem, 1.5vw, 1.55rem);
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   11 — ACTIVITY BOUNDARY
+   ========================================================= */
+
+.visit-boundary {
+  max-width: 940px;
+
+  padding: clamp(34px, 6vw, 72px);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--card-warm);
+}
+
+.boundary-label {
+  margin-bottom: clamp(34px, 5vw, 64px);
+
+  color: var(--gold);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.visit-boundary h2 {
+  max-width: 780px;
+
+  font-size: clamp(3rem, 6vw, 6.2rem);
+  font-weight: 850;
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+}
+
+.visit-boundary h2 + p {
+  margin-top: clamp(32px, 5vw, 54px);
+}
+
+.visit-boundary p:not(.boundary-label) {
+  max-width: 720px;
+
+  color: var(--muted);
+
+  font-size: clamp(1.08rem, 1vw + 0.65rem, 1.4rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.visit-boundary p + p {
+  margin-top: 22px;
+}
+
+.visit-boundary strong {
+  color: var(--green);
+
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   12 — OFFICIAL VISA LINK
+   ========================================================= */
+
+.official-visas-copy {
+  max-width: 690px;
+
+  margin-top: clamp(30px, 4vw, 48px);
+
+  color: var(--muted);
+
+  font-size: clamp(1.08rem, 1vw + 0.65rem, 1.4rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.official-visa-link {
+  max-width: 820px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin-top: clamp(36px, 5vw, 58px);
+  padding: clamp(24px, 3vw, 34px) 0;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  color: var(--green);
+
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+
+  transition:
+    opacity 180ms ease,
+    padding 180ms ease;
+}
+
+.official-visa-link small {
+  display: block;
+
+  margin-top: 8px;
+
+  color: var(--muted);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.official-link-arrow {
+  flex: 0 0 auto;
+
+  color: var(--gold);
+
+  font-size: 1.4rem;
+
+  transition: transform 180ms ease;
+}
+
+.official-visa-link:hover {
+  opacity: 0.72;
+}
+
+.official-visa-link:hover .official-link-arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   13 — CTA
+   ========================================================= */
+
+.large-cta {
+  min-height: 390px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: clamp(30px, 5.5vw, 66px);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--green);
+  color: var(--bg);
+}
+
+.large-cta::after {
+  content: "ᬩᬮᬶ";
+
+  position: absolute;
+  right: -0.1em;
+  bottom: -0.4em;
+
+  color: rgba(247, 244, 238, 0.07);
+
+  font-family: "Noto Sans Balinese", sans-serif;
+  font-size: clamp(10rem, 28vw, 25rem);
+  line-height: 1;
+}
+
+.large-cta h2,
+.large-cta p,
+.large-cta .cta-links {
+  position: relative;
+  z-index: 1;
+}
+
+.large-cta h2 {
+  max-width: 900px;
+
+  font-size: clamp(3.3rem, 7.5vw, 7.6rem);
+  font-weight: 850;
+  line-height: 0.93;
+  letter-spacing: -0.065em;
+}
+
+.large-cta p {
+  max-width: 580px;
+
+  margin-top: 24px;
+
+  color: rgba(247, 244, 238, 0.78);
+
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+}
+
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 52px;
+}
+
+.cta-links a {
+  background: var(--bg);
+  color: var(--green);
+}
+
+.cta-links a.secondary-light {
+  border: 1.5px solid rgba(247, 244, 238, 0.7);
+
+  background: transparent;
+  color: var(--bg);
+}
+
+
+/* =========================================================
+   14 — RESPONSIVE RULES
+   ========================================================= */
+
+@media (min-width: 576px) {
+
+  :root {
+    --container: min(100% - 48px, 1300px);
+  }
+
+}
+
+
+@media (min-width: 768px) {
+
+  .visit-content-grid {
+    grid-template-columns: 0.22fr 1fr;
+  }
+
+  .footer-layout {
+    grid-template-columns:
+      minmax(0, 1.4fr)
+      minmax(180px, 0.7fr)
+      minmax(180px, 0.7fr);
+
+    align-items: start;
+  }
+
+}
+
+
+@media (min-width: 997px) {
+
+  :root {
+    --container: min(100% - 72px, 1200px);
+  }
+
+  .header-inner {
+    justify-content: flex-end;
+  }
+
+  .brand {
+    margin-left: auto;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger,
+  .mobile-menu {
+    display: none !important;
+  }
+
+}
+
+
+@media (min-width: 1400px) {
+
+  .header-inner {
+    min-height: 84px;
+  }
+
+  .brand-lockup-nav {
+    font-size: clamp(1.8rem, 1.8vw, 3rem);
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .visit-scope-list {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-scope-item {
+    min-height: 120px;
+  }
+
+}
+
+
+@media (max-width: 575px) {
+
+  .visit-hero {
+    padding: 72px 0 76px;
+  }
+
+  .visit-hero h1 {
+    font-size: clamp(3.5rem, 17vw, 5rem);
+  }
+
+  .visit-lead {
+    max-width: 18ch;
+  }
+
+  .visit-section {
+    padding: 64px 0 76px;
+  }
+
+  .visit-content > h2,
+  .visit-boundary h2 {
+    font-size: clamp(2.8rem, 13vw, 4.2rem);
+  }
+
+  .visit-scope-list {
+    margin-top: 40px;
+  }
+
+  .visit-scope-item {
+    min-height: 104px;
+
+    grid-template-columns: 34px 1fr;
+    align-items: start;
+    align-content: center;
+
+    gap: 12px;
+
+    padding: 22px 18px;
+  }
+
+  .visit-scope-item p {
+    font-size: 1.15rem;
+  }
+
+  .visit-boundary {
+    padding: 28px 22px;
+  }
+
+  .large-cta {
+    min-height: 430px;
+  }
+
+  .large-cta h2 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .cta-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-links .button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   15 — ACCESSIBILITY / MOTION
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
