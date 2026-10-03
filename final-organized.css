@@ -2049,6 +2049,46 @@ h3 {
 
 }
 
+/* =========================================================
+   INLINE BRAND LOCKUP
+   Used when the myBalivisa wordmark appears inside body copy.
+   ========================================================= */
+
+.brand-lockup-inline {
+  display: inline-flex;
+  align-items: baseline;
+
+  /* Inherit the surrounding text scale instead of navbar scale. */
+  font-size: 1em;
+  font-weight: 800;
+  line-height: inherit;
+  letter-spacing: -0.07em;
+
+  color: var(--green);
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.brand-lockup-inline .brand-my,
+.brand-lockup-inline .brand-bali {
+  display: inline-block;
+}
+
+.brand-lockup-inline .brand-bali {
+  position: relative;
+  bottom: 0.06em;
+  margin-inline: 0.015em;
+}
+
+.brand-inline-copy {
+  margin-left: 0.16em;
+}
+
+
+
+
+
+
 
 
 @media (max-width: 767px) {
