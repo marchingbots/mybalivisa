@@ -118,36 +118,61 @@
 </head>
 
 <body>
+
   <header class="site-header">
-    <div class="site-shell">
-      <div class="header-inner">
-        <a class="brand" href="#home" aria-label="myBalivisa home">
-          <span class="brand-lockup brand-lockup-nav">
-            <span class="brand-my">my</span>
-            <span class="brand-bali">Balivisa</span>
-          </span>
-        </a>
+  <div class="site-shell">
+    <div class="header-inner">
 
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#visas">Deep Dive</a>
-          <a href="#contact">Contact</a>
-        </nav>
+      <!-- Brand -->
+      <a class="brand" href="index.html" aria-label="myBalivisa home">
+        <span class="brand-lockup brand-lockup-nav">
+          <span class="brand-my">my</span>
+          <span class="brand-bali">Balivisa</span>
+        </span>
+      </a>
 
-        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="visa-deep-dive.html">Deep Dive</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
+
+      <!-- Mobile menu button -->
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
     </div>
-  </header>
+
+    <!-- Mobile / hamburger navigation -->
+    <nav
+      class="mobile-menu"
+      id="mobile-menu"
+      aria-label="Mobile navigation"
+    >
+      <a href="index.html">Home</a>
+      <a href="visit-visas.html">Visit</a>
+      <a href="live.html">Live</a>
+      <a href="invest.html">Invest</a>
+      <a href="work.html">Work</a>
+      <a href="property.html">Property</a>
+      <a href="operate.html">Operate</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+       
 
   <main id="home">
     
