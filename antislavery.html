@@ -1,376 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Anti-Slavery Statement | myBalivisa</title>
 
   <meta
     name="description"
-    content="The myBalivisa anti-slavery and human trafficking statement."
-  >
+    content="Anti-Slavery and Human Trafficking Statement for myBalivisa, the immigration services brand of PT Kapan Kita Bersama."
+  />
 
-  <link rel="stylesheet" href="privacy.css">
+  <link rel="canonical" href="https://mybalivisa.com/antislavery.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Balinese:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Global website formatting -->
+  <link rel="stylesheet" href="final-organized.css" />
+
+  <script src="main.js" defer></script>
+
+  <style>
+    /* =========================================================
+       ANTI-SLAVERY PAGE
+       Lean document layout.
+       Global design rules remain in final-organized.css.
+       ========================================================= */
+
+    .antislavery-page {
+      padding: clamp(56px, 8vw, 110px) 0
+               clamp(80px, 10vw, 140px);
+    }
+
+    .antislavery-document {
+      max-width: 780px;
+    }
+
+    .antislavery-header {
+      padding-bottom: clamp(36px, 5vw, 60px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .antislavery-kicker {
+      margin-bottom: 16px;
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .antislavery-header h1 {
+      color: var(--text);
+      font-size: clamp(2.8rem, 6vw, 5.6rem);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+
+    .antislavery-intro {
+      max-width: 680px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 1vw + 0.55rem, 1.32rem);
+      font-weight: 500;
+      line-height: 1.55;
+      letter-spacing: -0.025em;
+    }
+
+    .antislavery-updated {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .antislavery-section {
+      padding: clamp(30px, 4vw, 44px) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .antislavery-section-number {
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.08em;
+    }
+
+    .antislavery-section h2 {
+      margin-bottom: 16px;
+      color: var(--text);
+      font-size: clamp(1.25rem, 1.2vw + 0.8rem, 1.65rem);
+      font-weight: 750;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+    }
+
+    .antislavery-section p,
+    .antislavery-section li {
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: -0.015em;
+    }
+
+    .antislavery-section p + p {
+      margin-top: 14px;
+    }
+
+    .antislavery-section ul {
+      margin: 16px 0 0 1.2rem;
+      padding: 0;
+    }
+
+    .antislavery-section li + li {
+      margin-top: 7px;
+    }
+
+    .antislavery-section strong {
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .antislavery-section a {
+      color: var(--green);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .antislavery-final {
+      border-bottom: 0;
+    }
+
+    @media (max-width: 575px) {
+      .antislavery-page {
+        padding-top: 42px;
+      }
+
+      .antislavery-header h1 {
+        font-size: clamp(2.7rem, 14vw, 4rem);
+      }
+
+      .antislavery-section {
+        padding: 28px 0;
+      }
+    }
+  </style>
 </head>
+
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
   <header class="site-header">
-    <div class="nav-container">
+    <div class="site-shell">
+      <div class="header-inner">
 
-      <a href="index.html" class="brand" aria-label="myBalivisa home">
-        <span class="brand-my">my</span><span class="brand-bali">Bali</span><span class="brand-visa">visa</span>
-      </a>
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="myBalivisa home"
+        >
+          <span class="brand-lockup brand-lockup-nav">
+            <span class="brand-my">my</span>
+            <span class="brand-bali">Balivisa</span>
+          </span>
+        </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="site-menu"
+        <nav
+          class="desktop-nav"
+          aria-label="Main navigation"
+        >
+          <a href="index.html">Home</a>
+          <a href="visa-deep-dive.html">Deep Dive</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+      </div>
+
+      <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Mobile navigation"
       >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="site-menu" class="site-menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
         <a href="visit-visas.html">Visit</a>
         <a href="live.html">Live</a>
         <a href="invest.html">Invest</a>
         <a href="work.html">Work</a>
         <a href="property.html">Property</a>
         <a href="operate.html">Operate</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="immigration-sources.html">Sources</a>
-        <a href="legal.html">Legal</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
 
     </div>
   </header>
 
 
-  <main>
+  <!-- =========================================================
+       MAIN
+       ========================================================= -->
 
-    <!-- DOCUMENT HEADER -->
-    <section class="document-hero">
-      <div class="document-container">
+  <main class="antislavery-page">
+    <div class="site-shell">
 
-        <p class="eyebrow">Responsible Business</p>
+      <article class="antislavery-document">
 
-        <h1>Anti-Slavery and Human Trafficking Statement</h1>
+        <!-- DOCUMENT HEADER -->
 
-        <p class="document-intro">
-          PT Kapan Kita Bersama, trading as myBalivisa, does not tolerate
-          slavery, forced labour, human trafficking, debt bondage, servitude,
-          child exploitation or other forms of coercive labour in our business
-          or business relationships.
-        </p>
+        <header class="antislavery-header">
 
-      </div>
-    </section>
+          <p class="antislavery-kicker">
+            Responsible Business
+          </p>
+
+          <h1>
+            Anti-Slavery and Human Trafficking Statement
+          </h1>
+
+          <p class="antislavery-intro">
+            PT Kapan Kita Bersama, trading as myBalivisa, does not
+            tolerate slavery, forced labour, human trafficking, debt
+            bondage, servitude, child exploitation or other forms of
+            coercive labour in our business or business relationships.
+          </p>
+
+          <p class="antislavery-updated">
+            Last updated: 3 October 2026
+          </p>
+
+        </header>
 
 
-    <!-- DOCUMENT CONTENT -->
-    <section class="document-content">
-      <div class="document-container">
+        <!-- 01 -->
 
+        <section class="antislavery-section">
 
-        <section class="document-section">
-          <div class="section-number">01</div>
+          <p class="antislavery-section-number">01</p>
 
-          <div class="section-body">
-            <h2>Our Standard</h2>
+          <h2>Our Standard</h2>
 
-            <p>
-              We conduct our business in accordance with applicable Indonesian
-              law.
-            </p>
+          <p>
+            We conduct our business in accordance with applicable
+            Indonesian law.
+          </p>
 
-            <p>
-              We also support internationally recognised principles concerning
-              human rights, decent work, forced labour and child labour.
-            </p>
+          <p>
+            We also support internationally recognised principles
+            concerning human rights, decent work, forced labour and
+            child labour.
+          </p>
 
-            <p>
-              No person working for us or providing services to us should:
-            </p>
+          <p>
+            No person working for us or providing services to us should:
+          </p>
 
-            <ul>
-              <li>be forced or coerced to work;</li>
+          <ul>
+            <li>be forced or coerced to work;</li>
 
-              <li>
-                be required to surrender a passport or identity document as a
-                condition of work;
-              </li>
+            <li>
+              be required to surrender a passport or identity document
+              as a condition of work;
+            </li>
 
-              <li>
-                be subject to threats, violence, intimidation or restriction
-                of movement;
-              </li>
+            <li>
+              be subject to threats, violence, intimidation or
+              restriction of movement;
+            </li>
 
-              <li>
-                be charged recruitment fees that create or contribute to debt
-                bondage;
-              </li>
+            <li>
+              be charged recruitment fees that create or contribute to
+              debt bondage;
+            </li>
 
-              <li>have wages unlawfully withheld;</li>
+            <li>have wages unlawfully withheld;</li>
 
-              <li>
-                be prevented from freely ending their employment, subject to
-                lawful contractual requirements;
-              </li>
+            <li>
+              be prevented from freely ending their employment, subject
+              to lawful contractual requirements;
+            </li>
 
-              <li>
-                be subjected to deceptive recruitment or materially misleading
-                employment terms; or
-              </li>
+            <li>
+              be subjected to deceptive recruitment or materially
+              misleading employment terms; or
+            </li>
 
-              <li>
-                be subjected to slavery, servitude, trafficking or other forms
-                of labour exploitation.
-              </li>
-            </ul>
-          </div>
+            <li>
+              be subjected to slavery, servitude, trafficking or other
+              forms of labour exploitation.
+            </li>
+          </ul>
+
         </section>
 
 
-        <section class="document-section">
-          <div class="section-number">02</div>
+        <!-- 02 -->
 
-          <div class="section-body">
-            <h2>Child Labour</h2>
+        <section class="antislavery-section">
 
-            <p>
-              We do not use unlawful child labour.
-            </p>
+          <p class="antislavery-section-number">02</p>
 
-            <p>
-              We require employment involving young persons to comply with
-              Indonesian minimum-age, education, working-time, health and
-              safety, and prohibited-work requirements.
-            </p>
+          <h2>Child Labour</h2>
 
-            <p>
-              We do not tolerate the use of children in slavery, trafficking,
-              forced labour or other forms of work prohibited by law.
-            </p>
-          </div>
+          <p>
+            We do not use unlawful child labour.
+          </p>
+
+          <p>
+            We require employment involving young persons to comply
+            with Indonesian minimum-age, education, working-time,
+            health and safety, and prohibited-work requirements.
+          </p>
+
+          <p>
+            We do not tolerate the use of children in slavery,
+            trafficking, forced labour or other forms of work
+            prohibited by law.
+          </p>
+
         </section>
 
 
-        <section class="document-section">
-          <div class="section-number">03</div>
+        <!-- 03 -->
 
-          <div class="section-body">
-            <h2>Employees and Recruitment</h2>
+        <section class="antislavery-section">
 
-            <p>
-              Employment must be voluntary.
-            </p>
+          <p class="antislavery-section-number">03</p>
 
-            <p>
-              Workers must receive clear information about the material terms
-              of their employment.
-            </p>
+          <h2>Employees and Recruitment</h2>
 
-            <p>
-              We do not use recruitment practices designed to place workers
-              into debt or make them dependent on an employer, recruiter or
-              intermediary.
-            </p>
+          <p>
+            Employment must be voluntary.
+          </p>
 
-            <p>
-              Personal identity documents remain under the control of their
-              owner except where temporary possession is reasonably necessary
-              for a lawful administrative process and the document is returned
-              promptly.
-            </p>
-          </div>
+          <p>
+            Workers must receive clear information about the material
+            terms of their employment.
+          </p>
+
+          <p>
+            We do not use recruitment practices designed to place
+            workers into debt or make them dependent on an employer,
+            recruiter or intermediary.
+          </p>
+
+          <p>
+            Personal identity documents remain under the control of
+            their owner except where temporary possession is reasonably
+            necessary for a lawful administrative process and the
+            document is returned promptly.
+          </p>
+
         </section>
 
 
-        <section class="document-section">
-          <div class="section-number">04</div>
+        <!-- 04 -->
 
-          <div class="section-body">
-            <h2>Suppliers and Business Partners</h2>
+        <section class="antislavery-section">
 
-            <p>
-              We expect contractors, suppliers, agents and other business
-              partners involved in providing our services to comply with
-              applicable labour and human-rights laws.
-            </p>
+          <p class="antislavery-section-number">04</p>
 
-            <p>
-              We can conduct additional enquiries where a business
-              relationship, activity, location or workforce presents an
-              increased risk of forced labour, trafficking or worker
-              exploitation.
-            </p>
+          <h2>Suppliers and Business Partners</h2>
 
-            <p>
-              Where a material concern is identified, we can require corrective
-              action, reconsider the business relationship, or report suspected
-              unlawful conduct to the appropriate authority.
-            </p>
-          </div>
+          <p>
+            We expect contractors, suppliers, agents and other business
+            partners involved in providing our services to comply with
+            applicable labour and human-rights laws.
+          </p>
+
+          <p>
+            We can conduct additional enquiries where a business
+            relationship, activity, location or workforce presents an
+            increased risk of forced labour, trafficking or worker
+            exploitation.
+          </p>
+
+          <p>
+            Where a material concern is identified, we can require
+            corrective action, reconsider the business relationship,
+            or report suspected unlawful conduct to the appropriate
+            authority.
+          </p>
+
         </section>
 
 
-        <section class="document-section">
-          <div class="section-number">05</div>
+        <!-- 05 -->
 
-          <div class="section-body">
-            <h2>Identifying Risk</h2>
+        <section class="antislavery-section">
 
-            <p>
-              We use recognised indicators of forced labour as practical
-              warning signs.
-            </p>
+          <p class="antislavery-section-number">05</p>
 
-            <p>
-              These can include deception, abuse of vulnerability, restriction
-              of movement, isolation, threats, violence, retention of identity
-              documents, withholding of wages, debt bondage, abusive working
-              or living conditions, and excessive involuntary overtime.
-            </p>
+          <h2>Identifying Risk</h2>
 
-            <p>
-              The presence of a warning sign requires appropriate review. It
-              does not by itself establish that forced labour has occurred.
-            </p>
-          </div>
+          <p>
+            We use recognised indicators of forced labour as practical
+            warning signs.
+          </p>
+
+          <p>
+            These can include deception, abuse of vulnerability,
+            restriction of movement, isolation, threats, violence,
+            retention of identity documents, withholding of wages,
+            debt bondage, abusive working or living conditions, and
+            excessive involuntary overtime.
+          </p>
+
+          <p>
+            The presence of a warning sign requires appropriate review.
+            It does not by itself establish that forced labour has
+            occurred.
+          </p>
+
         </section>
 
 
-        <section class="document-section">
-          <div class="section-number">06</div>
+        <!-- 06 -->
 
-          <div class="section-body">
-            <h2>Reporting Concerns</h2>
+        <section class="antislavery-section">
 
-            <p>
-              Employees, clients, contractors and other persons can raise
-              concerns about suspected forced labour, trafficking or
-              exploitation.
-            </p>
+          <p class="antislavery-section-number">06</p>
 
-            <p>
-              We will assess credible concerns and take appropriate action based
-              on the circumstances and applicable law.
-            </p>
+          <h2>Reporting Concerns</h2>
 
-            <p>
-              A person who raises a genuine concern should not be subjected to
-              retaliation for making the report in good faith.
-            </p>
-          </div>
+          <p>
+            Employees, clients, contractors and other persons can raise
+            concerns about suspected forced labour, trafficking or
+            exploitation.
+          </p>
+
+          <p>
+            We will assess credible concerns and take appropriate action
+            based on the circumstances and applicable law.
+          </p>
+
+          <p>
+            A person who raises a genuine concern should not be
+            subjected to retaliation for making the report in good
+            faith.
+          </p>
+
         </section>
 
 
-        <section class="document-section">
-          <div class="section-number">07</div>
+        <!-- 07 -->
 
-          <div class="section-body">
-            <h2>Legal and International Framework</h2>
+        <section class="antislavery-section">
 
-            <p>
-              Our approach is informed by applicable Indonesian law and
-              recognised international labour and human-rights standards.
-            </p>
+          <p class="antislavery-section-number">07</p>
 
-            <p>
-              These include Indonesian legislation concerning human rights,
-              employment, human trafficking and child labour, together with
-              relevant International Labour Organization conventions ratified
-              by Indonesia.
-            </p>
+          <h2>Legal and International Framework</h2>
 
-            <p>
-              We also take account of internationally recognised responsible
-              business principles, including the United Nations Guiding
-              Principles on Business and Human Rights.
-            </p>
-          </div>
+          <p>
+            Our approach is informed by applicable Indonesian law and
+            recognised international labour and human-rights standards.
+          </p>
+
+          <p>
+            These include Indonesian legislation concerning human
+            rights, employment, human trafficking and child labour,
+            together with relevant International Labour Organization
+            conventions ratified by Indonesia.
+          </p>
+
+          <p>
+            We also take account of internationally recognised
+            responsible business principles, including the United
+            Nations Guiding Principles on Business and Human Rights.
+          </p>
+
         </section>
 
 
-        <section class="document-section">
-          <div class="section-number">08</div>
+        <!-- 08 -->
 
-          <div class="section-body">
-            <h2>Review</h2>
+        <section class="antislavery-section antislavery-final">
 
-            <p>
-              We review this statement and our related controls periodically
-              and when there is a material change to our operations or
-              applicable legal requirements.
-            </p>
+          <p class="antislavery-section-number">08</p>
 
-            <p>
-              <strong>PT Kapan Kita Bersama</strong><br>
-              Trading as myBalivisa<br>
-              Indonesia
-            </p>
-          </div>
+          <h2>Review</h2>
+
+          <p>
+            We review this statement and our related controls
+            periodically and when there is a material change to our
+            operations or applicable legal requirements.
+          </p>
+
+          <p>
+            <strong>PT Kapan Kita Bersama</strong><br />
+            Trading as myBalivisa<br />
+            Indonesia
+          </p>
+
         </section>
 
+      </article>
 
-      </div>
-    </section>
-
+    </div>
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
   <footer class="site-footer">
-    <div class="footer-container">
+  <div class="site-shell footer-layout">
 
+    <div class="footer-brand-column">
       <div class="footer-brand">
-        <a href="index.html" class="brand" aria-label="myBalivisa home">
-          <span class="brand-my">my</span><span class="brand-bali">Bali</span><span class="brand-visa">visa</span>
-        </a>
-
-        <p>
-          Indonesia immigration and business support.
-        </p>
+        <span class="brand-lockup footer-brand-lockup">
+          <span class="brand-my">my</span>
+          <span class="brand-bali">Balivisa</span>
+        </span>
       </div>
 
-      <div class="footer-links">
+      <p class="footer-statement">
+       Compliance-first immigration support in Indonesia. 
+      </p>
+
+      <p class="fine-print">
+        © 2026 myBalivisa
+      </p>
+    </div>
+
+    <div class="footer-links-group">
+      <p class="footer-label">Start</p>
+
+      <nav class="footer-links" aria-label="Primary footer navigation">
+        <a href="https://wa.me/6282266691197">WhatsApp</a>
+
+        <a
+          class="email-link"
+          href="#"
+          data-u="hello"
+          data-d="mybalivisa"
+          data-t="com"
+        >
+          Send an email
+        </a>
+
+        <a href="visa-deep-dive.html">Visa Deep Dive</a>
+
+        <a href="explore-indonesia-visa-types.html">
+          Visa Types
+        </a>
+           <a
+      href="https://instagram.com/mybalivisa"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram
+    </a>
+
+    <a
+      href="https://facebook.com/mybalivisa"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Facebook
+    </a>
+      </nav>
+    </div>
+
+    <div class="footer-links-group footer-links-secondary">
+      <p class="footer-label">Company</p>
+
+      <nav class="footer-links" aria-label="Legal footer navigation">
+        <a href="pricing.html">Pricing</a>
         <a href="privacy.html">Privacy</a>
         <a href="legal.html">Legal</a>
         <a href="antislavery.html">Anti-Slavery</a>
-        <a href="immigration-sources.html">Sources</a>
-      </div>
-
-      <div class="footer-bottom">
-        <p>
-          &copy; 2026 PT Kapan Kita Bersama. All rights reserved.
-        </p>
-      </div>
-
+      </nav>
     </div>
-  </footer>
 
-
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const siteMenu = document.querySelector('.site-menu');
-
-    if (menuToggle && siteMenu) {
-      menuToggle.addEventListener('click', () => {
-        const isOpen =
-          menuToggle.getAttribute('aria-expanded') === 'true';
-
-        menuToggle.setAttribute('aria-expanded', String(!isOpen));
-        siteMenu.classList.toggle('is-open');
-      });
-    }
-  </script>
+  </div>
+</footer>
 
 </body>
 </html>
