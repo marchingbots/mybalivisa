@@ -6,11 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.querySelector("#mobile-menu");
   const mobileLinks = document.querySelectorAll(".mobile-menu a");
 
-  // function closeMenu() {
-  //   menuButton.setAttribute("aria-expanded", "false");
-  //   menuButton.setAttribute("aria-label", "Open menu");
-  //   mobileMenu.classList.remove("is-open");
-  // }
 
   function closeMenu() {
   if (!menuButton || !mobileMenu) return;
